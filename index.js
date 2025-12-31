@@ -51,7 +51,7 @@ const requireAdmin = (req, res, next) => {
   }
 };
 
-app.post('/api/rewrite', requireAdmin, async (req, res) => {
+app.post('/api/rewrite', async (req, res) => {
   try {
     if (!geminiKey) {
       console.error('Missing GEMINI_API_KEY');
